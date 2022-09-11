@@ -15,8 +15,8 @@ const firebaseConfig = {
   storageBucket: "github-monitor-25054.appspot.com",
   messagingSenderId: "872127967861",
   appId: "1:872127967861:web:3a7ec548d583b3f14c7e3c"
-};
-
+}; 
+ 
 root.render(
   <App />
 );
