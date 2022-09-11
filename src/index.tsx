@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { HomePage } from './Pages/HomePage';
 import { initializeApp } from "firebase/app";
+import { App } from './Pages/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,9 +18,7 @@ const firebaseConfig = {
 };
 
 root.render(
-  <React.StrictMode>
-    <HomePage />
-  </React.StrictMode>
+  <App />
 );
 
 const app = initializeApp(firebaseConfig);
