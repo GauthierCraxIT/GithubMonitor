@@ -3,6 +3,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Repository } from '../Models/Repository';
 import { PullRequest } from '../Models/PullRequest';
+import { PullRequestDetails } from './PullRequestDetails';
 
 export interface RepositoryProps {
   expanded: boolean
@@ -32,10 +33,9 @@ export const RepositoryDetails: FC<RepositoryProps> = ({ expanded, repository, p
       </Typography>
     </AccordionSummary>
     <AccordionDetails>
-      <Typography>
-        Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-        Aliquam eget maximus est, id dignissim quam.
-      </Typography>
+          {pullRequests.map(pullRequest => (
+              <PullRequestDetails key={pullRequest.id} pullRequest={pullRequest} />
+          ))}
     </AccordionDetails>
   </Accordion>
   )
