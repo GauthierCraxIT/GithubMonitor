@@ -16,7 +16,6 @@ export const HomePage: FC = () => {
     <>
       <h1>Github Monitor</h1>
       <RepositoryList repositories={repositories ?? []} />
-      <button onClick={() => fetchRepositories()}>FETCH REPOS</button>
     </>
   )
 };
